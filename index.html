@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon_logo.png" type="image/png">
+    <title>Portifólio | Gabriella</title>
+</head>
+<body>
+
+   
+    <div class="particulas">
+
+    </div>
+    <nav class="navegacao">
+            <ul class="menu">
+                <li>
+                    <a href="#inicio" class="menu-link">Início </a>
+                </li>
+                <li>
+                    <a href="#sobre" class="menu-link">Sobre </a>
+                </li>
+                <li>
+                    <a href="#projetos" class="menu-link">Projetos </a>
+                </li>
+                <li>
+                    <a href="#contatos" class="menu-link">Contato </a>
+                </li>
+            </ul>
+    </nav>
+
+    <main id="inicio" class="header">
+                <img src="images/16.png" alt="Foto de Gabriella Pereira Morais" class="foto-perfil">
+                <h1> Gabriella Pereira Morais</h1>
+                <p class="subtitulo-header"> Front End & IA</p>
+            
+
+    </main>
+
+            <section id="sobre" class="sobre">
+                <h2 class="sobre-titulo">Sobre mim</h2>
+                <div class="sobre-box">
+                    <p class="sobre-texto">
+                        Sou Gabriella Pereira Morais, estudante de Ciência da Computação no IFSP, moro em São Paulo, e sou apaixonada por tecnologia que transforma realidades. Tenho interesse especial em Inteligência Artificial e desenvolvimento front-end, áreas onde enxergo o potencial de unir lógica e criatividade para criar experiências significativas. Tenho conhecimentos básicos em Python, JavaScript e um pezinho em React, o que me permite navegar entre dados e interfaces com curiosidade e vontade de aprender sempre mais.                </div>
+            </section>
+
+            <section id="projetos" class="projetos">
+                <h2 class="projetos-titulos">Meus projetos</h2>
+                <h4 class="text">Clique nas imagens para ver mais!</h4>
+                
+                <div class="projetos-box">
+                    
+                   
+                        <div class="projetos-card">
+                            <a href="ProjetosAcademicos.html">
+                                <img src="images/3.png" alt="IF logo" class="projetos-imagem">
+                            </a>
+                            <div class="caixa-textos-projeto">
+                                <h3 class="info-projetos">Projetos</h3>
+                                <p class="paragrafo-projeto">
+                                    Principais projetos desenvolvidos na minha tragetória acadêmica
+                                </p>
+                            </div>
+                        </div>
+                  
+                        <div class="projetos-card">
+                            <a href="Voluntariado.html">
+                                <img src="images/2.png" alt="CACC" class="projetos-imagem">
+                            </a>
+                             
+                            <div class="caixa-textos-projeto">
+                                <h3 class="info-projetos">Voluntariado Acadêmico</h3>
+                                <p class="paragrafo-projeto">
+                                    Projetos que estou envolvida dentro do campus 
+                                </p>
+                            </div>
+                        </div>
+
+                        <!--<div class="projetos-card">
+                            <a href="Cursos.html">                                
+                                <img src="images/imagem_teste.png" alt="Logo" class="projetos-imagem">
+                            </a>
+                            <div class="caixa-textos-projeto">
+                                <h3 class="info-projetos">Cursos</h3>
+                                <p class="paragrafo-projeto">Cursos e certificações</p>
+                            </div>-->
+                         </div>
+                    
+                    
+                </div>
+
+            </section>
+
+
+
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em contatos</h2>
+        <form class="formulario-contato" id="formulrio" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">       
+                 <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" id="mensagem" rows="7"></textarea>    
+            </div>
+
+            <button type="submit" class="botao-form">Me contate via WhatsApp!</button>
+        </form>
+        
+    </section>
+    
+    <script>
+            function enviarWhats(event){
+                event.preventDefault()
+
+                const nome = document.getElementById('nome').value;
+                const mensagem = document.getElementById('mensagem').value;
+                const telefone = '5511947606011';
+                const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+                const msgFormatada = encodeURIComponent(texto)
+
+                const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+                window.open(url, '_blank')
+
+            }
+    </script>
+
+
+      
+</body>
+</html>
