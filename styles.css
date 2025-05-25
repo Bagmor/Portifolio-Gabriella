@@ -26,16 +26,14 @@ body{
     background-color: var(--escuro);
     color:var(--claro);
 
-        margin: 0; /* Remove margens padrão */
+        margin: 0; 
         padding: 0;
-        min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+        min-height: 100vh; 
         background: 
-          /* Cor de fallback (caso a imagem não carregue) */
-          var(--escuro)          /* Imagem de fundo centralizada e cobrindo a tela sem distorcer */
+          var(--escuro)          
           url("images/background.png") center/cover no-repeat;
           
-        /* Garante que a imagem não ultrapasse sua proporção */
-        background-attachment: fixed; /* Opcional: efeito parallax */
+        background-attachment: fixed; 
       
 }
 
@@ -157,7 +155,7 @@ h1{
     border-radius: 16px;
     backdrop-filter: blur(5px);
     border: 1px solid var(--vidro);
-    overflow: hidden; /*Esconde as "sobra" das imagens*/
+    overflow: hidden; 
     transition: all 0.5s ease;
     cursor:pointer;
 }
@@ -224,10 +222,10 @@ h1{
 
 .text {
     text-align: center;
-    opacity: 0.6; /* ou menor se quiser mais suave, como 0.4 */
-    font-size: 0.9rem; /* opcional: aumenta um pouquinho a legibilidade */
-    margin-top: 2rem; /* opcional: espaçamento acima */
-    margin-bottom: 1rem; /* espaçamento abaixo */
+    opacity: 0.6; 
+    font-size: 0.9rem; 
+    margin-top: 2rem; 
+    margin-bottom: 1rem; 
 }
 
 
@@ -269,6 +267,90 @@ h1{
 
 }
 
+
+.sobre2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 2rem 1rem;
+}
+
+
+.titulo-skills {
+    width: 200px; 
+    font-size: 1.2rem;
+    color: #333;
+    margin-right: 30px;
+    text-align: right;
+    color: var(--claro); 
+    margin-bottom: 10px;
+}
+
+
+.skills-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px; 
+}
+
+
+
+
+
+.skill-box {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.skills-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease, border-color 0.3s ease;
+}
+
+.skills-img.basico:hover {
+    transform: scale(1.4);
+     border: 80px solid #21aaff8d;
+}
+
+.skills-img.intermediario:hover {
+    transform: scale(1.4);
+     border: 80px solid #ffaa00e1;
+     
+}
+
+.skills-img.avancado:hover {
+    transform: scale(1.4);
+     border: 80px solid #c003038d;
+}
+
+.skill-nivel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.skill-box:hover .skill-nivel {
+    opacity: 1;
+}
+
+
+
+
 .particulas{
     position: fixed;
     top:0;
@@ -283,6 +365,7 @@ h1{
         var(--maisEscuro);
 }
 
+
 @Keyframes flutuar{
     0%, 100% {
         transform: translateY(0);
@@ -294,8 +377,74 @@ h1{
 
 
 
-@media (min-width: 1024px) {
-    body {
-      font-size: 20px;
+@media screen and (max-width: 1024px) {
+    .header {
+        min-height: 100vh;
+        padding-top: 80px;
     }
-  }
+    
+    .foto-perfil {
+        width: 250px;
+        height: 250px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    .subtitulo-header {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .menu {
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .sobre-box {
+        padding: 1.5rem;
+    }
+    
+    .sobre-texto {
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sobre2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .titulo-skills {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+    
+    .skills-container {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .skill-box {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .projetos-box {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .menu-link {
+        font-size: 0.9rem;
+    }
+}
