@@ -375,6 +375,54 @@ h1{
     }
 }
 
+.site-footer {
+    background-color: #101420; /* Cor exata da imagem que você enviou */
+    color: #ffffff; /* Cor do texto e ícones */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espaçamento entre os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+}
+
+.contact-list li a {
+    color: #ffffff; /* Garante que ícone e texto do link sejam brancos */
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease; /* Efeito suave na cor ao passar o mouse */
+}
+
+.contact-list li a:hover {
+    color: #cccccc; /* Cor levemente mais clara ao passar o mouse */
+}
+
+.contact-list .icon {
+    font-size: 24px; /* Tamanho do ícone */
+    margin-right: 3px; /* Espaço entre o ícone e o texto */
+}
+
 
 
 @media screen and (max-width: 1024px) {
